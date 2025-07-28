@@ -18,7 +18,7 @@
     "@mui/joy": "^5.0.0-beta.52",
     "@mui/material": "^7.2.0",
     "axios": "^1.10.0",
-    "framer-motion": "^12.23.6",
+    "framer-motion": "^12.23.11",
     "mongoose": "^8.16.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
