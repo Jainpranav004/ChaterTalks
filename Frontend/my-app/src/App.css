@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Lora', serif;
+}
+
+/* Apply background image using ::before */
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("./pics/bg7.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  /* Only this image has reduced opacity */
+  z-index: 0;
+}
+
+/* Ensure everything inside the App is above the background image */
+.App>* {
+  position: relative;
+  z-index: 1;
+}
