@@ -11,7 +11,7 @@ const Login = () => {
    
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
 
@@ -75,14 +75,14 @@ const Login = () => {
           <FormControl id="first-name" color ="black" required >
               <FormLabel sx={{fontWeight:"bold" , color:"black" }}>Name </FormLabel>
               <Box sx={{border:"black", bgcolor:"#eaeded" , borderRadius:"5px"}}>
-                <Input placeholder='Enter Your Name' onChange={(e) => setName(e.target.value)} />
+                <Input value={name} placeholder='Enter Your Name' onChange={(e) => setName(e.target.value)} />
               </Box>
             </FormControl>
             
             <FormControl id="email" color ="black" required >
               <FormLabel sx={{fontWeight:"bold", color:"black" }}>Email</FormLabel>
               <Box sx={{border:"black", bgcolor:"#eaeded" , borderRadius:"5px"}}>
-              <Input placeholder='Enter Email Id' onChange={(e) => setEmail(e.target.value)} />
+              <Input value={email} placeholder='Enter Email Id' onChange={(e) => setEmail(e.target.value)} />
               </Box>
             </FormControl>
       
@@ -90,7 +90,7 @@ const Login = () => {
           <FormControl id="password" color ="black" required >
             <FormLabel sx={{fontWeight:"bold", color:"black" }}>Password </FormLabel>
             <Box sx={{border:"black", bgcolor:"#eaeded" , borderRadius:"5px"}}>
-            <Input type={showPassword ? 'text' : 'password'}
+            <Input type={showPassword ? 'text' : 'password'} value={password}
              placeholder='Enter Your Password' onChange={(e) => setPassword(e.target.value)} 
               endAdornment={
               <InputAdornment position="end">
@@ -108,9 +108,10 @@ const Login = () => {
       
         
               <Button variant="contained" sx={{ bgcolor: "red", width: '100%' }} 
-                  onClick={() => {
-                    setEmail("janinapranv02@gmail.com");
-                    setPassword("123456@@");
+          onClick={() => {
+                    setName("qw");
+                    setEmail("qw");
+                    setPassword("qw");
                   }}>Get User Credentials</Button>
           
 
