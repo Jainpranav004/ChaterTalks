@@ -13,6 +13,8 @@ const SideDrawer = () => {
     const [loading, setLoading] = useState(false);
     const [loadingResult, setLoadingResult] = useState();
     
+  
+  
   const [drawerOpen, setDrawerOpen] = useState(false); 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
@@ -26,9 +28,7 @@ const SideDrawer = () => {
     
     <>
         
-      <Box display={"flex"} justifyContent={"space-between"} alignItems={"Center"} width ="100%" bgcolor="white" p={"5px 10px 5px 10px"}>
-        
-       
+      <Box display={"flex"} fontFamily={"work-sans"} justifyContent={"space-between"} alignItems={"Center"} width ="100%" bgcolor="white" p={"5px 10px 5px 10px"}>
                 <Tooltip title="Search the User" arrow placement='bottom-end' >
                   <Button variant='text' onClick={handleDrawerOpen}>
                       <i className="fa-solid fa-magnifying-glass"></i>
