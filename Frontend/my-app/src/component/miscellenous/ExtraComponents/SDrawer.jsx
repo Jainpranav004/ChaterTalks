@@ -43,6 +43,10 @@ export default function SDrawer({isOpen , onClose}) {
           },
         }; 
         const { data } = await axios.post("/api/chat", { userId }, config);
+
+        if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
+
+
         setSelectedChat(data);
         setLoadingResult(false);
         onClose();
@@ -108,7 +112,8 @@ export default function SDrawer({isOpen , onClose}) {
                 </Box>
               ))}
             </Box>
-          )}
+        )}
+        
       </ListItem>
         
     
