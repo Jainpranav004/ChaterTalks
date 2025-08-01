@@ -30,7 +30,7 @@ const SideDrawer = () => {
         
       <Box display={"flex"} fontFamily={"work-sans"} justifyContent={"space-between"} alignItems={"Center"} width ="100%" bgcolor="white" p={"5px 10px 5px 10px"}>
                 <Tooltip title="Search the User" arrow placement='bottom-end' >
-                  <Button variant='text' onClick={handleDrawerOpen}>
+                  <Button variant='outlined' onClick={handleDrawerOpen}>
                       <i className="fa-solid fa-magnifying-glass"></i>
                       <Typography sx={{display:{xs:"none", md:"flex"}}} textTransform={"none"} paddingX={"15px"}> Search User </Typography>
                   </Button>
