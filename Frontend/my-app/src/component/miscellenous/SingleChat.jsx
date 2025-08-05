@@ -29,6 +29,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                                         <span style={{ color: "#007bff", cursor: "pointer", fontSize: "14px" }} > View Profile</span>
                                     }
                                 />
+                                <UpdateGroupChatModal fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
                             </>
                         ) : (
                             <>
